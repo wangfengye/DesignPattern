@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 /**
  * Created by lenovo on 2017/6/28.

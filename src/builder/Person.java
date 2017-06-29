@@ -8,7 +8,10 @@ public class Person {
     private String age;
     private String sex;
 
-    public Person() {
+    public Person(Builder builder) {
+        this.name = builder.name;
+        this.age = builder.age;
+        this.sex = builder.sex;
     }
 
     public Person(String name, String age, String sex) {
@@ -48,5 +51,27 @@ public class Person {
                 ", age='" + age + '\'' +
                 ", sex='" + sex + '\'' +
                 '}';
+    }
+    public static class Builder{
+        private String name;
+        private String age;
+        private String sex;
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public Builder setAge(String age) {
+            this.age = age;
+            return this;
+        }
+        public Builder setSex(String sex) {
+            this.sex = sex;
+            return this;
+        }
+        public Person create(){
+            return new Person(this);
+        }
+
     }
 }

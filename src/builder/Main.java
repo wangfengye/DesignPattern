@@ -5,7 +5,12 @@ package builder;
  */
 public class Main {
     public static void main(String[] args){
-        PersonBuilder builder =new PersonBuilder();
-        builder.setName("maple");
+       Person person = new Person.Builder()
+               .setName("maple")
+               .setAge("16")
+               .setSex("man")
+               .create();
+        System.out.print(person.toString());
+
     }
 }
