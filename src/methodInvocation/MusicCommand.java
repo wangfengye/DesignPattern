@@ -14,4 +14,9 @@ public class MusicCommand implements Command{
     public void execute() {
         music.on();
     }
+
+    @Override
+    public void undo() {
+        music.off();
+    }
 }

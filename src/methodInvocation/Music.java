@@ -7,4 +7,8 @@ public class Music {
     public void on(){
         System.out.println("music: 诀别诗 两三行");
     }
+    public void off(){
+        System.out.println("stop : 诀别诗 两三行");
+    }
+
 }
