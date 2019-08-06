@@ -3,9 +3,16 @@ package singleton;
 /**
  * Created by lenovo on 2017/6/28.
  * 单例模式
+ *
+ * ### class加载时机
+ * 0. 指令--->对应操作
+ * 1. new ---> 初始化实例
+ * 2. getstatic--->读取静态变量
+ * 3. putstati--->设置静态变量
+ * 4. invokestat---> 调用静态函数
  */
 public class Singleton {
-    private static Singleton instance = null;
+    private volatile static Singleton instance = null;
     private Singleton(){}
 
     /**
@@ -18,7 +25,7 @@ public class Singleton {
      */
     public static Singleton getInstance(){
         if (instance == null){
-            synchronized (instance){
+            synchronized (Singleton.class){
                 if (instance ==null){
                     instance = new Singleton();
                 }
@@ -26,4 +33,5 @@ public class Singleton {
         }
         return instance;
     }
+
 }
