@@ -1,5 +1,6 @@
 ## Design Patterns(设计模式)
 
+> *.mdj 文件为基于starUML的uml图
 ### 设计原则：
 * 单一职责原则 Single Responsibility Principle
 * 对扩展开放,对修改关闭
@@ -7,7 +8,7 @@
 ### 创建型模式
 * 单例模式(Singleton)
 * 工厂模式(Factoty)
-* 抽象工厂模式(Abstarct Factory)
+* 抽象工厂模式(Abstarct Factory)例子:集合迭代器
 * 建造者模式(Builder)
     >用于创建复合对象
 * 原型模式(prototype)
