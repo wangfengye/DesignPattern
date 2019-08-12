@@ -7,6 +7,6 @@ public class FirstObserver implements Observer{
 
     @Override
     public void update(float temp, float humidity, float pressure) {
-        System.out.print("first: " +temp);
+        System.out.println("first: " +temp);
     }
 }

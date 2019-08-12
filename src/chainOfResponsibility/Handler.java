@@ -4,13 +4,19 @@ package chainOfResponsibility;
  * Created by lenovo on 2017/7/5.
  */
 public abstract class Handler {
-     Handler handler;
+    Handler handler;
+
     abstract void handleRequest(int money);
-    public Handler getHandler() {
-        return handler;
+
+    public void handlerNext(int money) {
+        if (handler != null) handler.handleRequest(money);
+        else {
+            System.out.println("无人处理");
+        }
     }
 
-    public void setHandler(Handler handler) {
+    public Handler nextHandler(Handler handler) {
         this.handler = handler;
+        return handler;
     }
 }

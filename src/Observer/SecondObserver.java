@@ -6,6 +6,6 @@ package Observer;
 public class SecondObserver implements Observer{
     @Override
     public void update(float temp, float humidity, float pressure) {
-        System.out.print("second: "+humidity);
+        System.out.println("second: "+humidity);
     }
 }

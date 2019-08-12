@@ -12,6 +12,7 @@ public class Main {
         persons.add(new Person("b",4));
         persons.add(new Person("c",2));
         Sort.sort(persons);
-        System.out.print(Sort.sort(persons));
+        System.out.print(persons);
+
     }
 }

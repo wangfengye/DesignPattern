@@ -5,17 +5,9 @@ package methodInvocation;
  */
 public class Main {
     public static void main(String[] args){
-        Control control = new Control();
-        Light light = new Light();
-        LightCommand command = new LightCommand(light);
-        control.setCommand(command,0);
+   Control control = new Control(new LightCommand(new Light()));
+   control.action();
+   control.back();
 
-
-        Command command1 = new MusicCommand(new Music());
-        control.setCommand(command1,1);
-        control.buttonWasPressed(0);
-        control.undoButtonWasPressed();
-        control.buttonWasPressed(1);
-        control.undoButtonWasPressed();
     }
 }

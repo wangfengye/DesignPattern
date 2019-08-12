@@ -4,23 +4,19 @@ package methodInvocation;
  * Created by lenovo on 2017/6/29.
  */
 public class Control {
-    private Command[] commands;
+    private Command command;
     private Command undoCommand;
 
-    public Control() {
-        this.commands = new Command[2];
+    public Control(Command command) {
+        this.command = command;
     }
 
-    public void setCommand(Command command, int i) {
-        commands[i] = command;
+    public void action() {
+       command.execute();
+        undoCommand = command;
     }
 
-    public void buttonWasPressed(int i) {
-        commands[i].execute();
-        undoCommand = commands[i];
-    }
-
-    public void undoButtonWasPressed() {
+    public void back() {
         undoCommand.undo();
     }
 }

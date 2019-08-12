@@ -5,13 +5,13 @@ import java.util.ArrayList;
 /**
  * Created by lenovo on 2017/7/5.
  */
-public class Man implements Cloneable{
+public class Man implements Cloneable {
     private int no;
-    private ArrayList nos;
+    private ArrayList<Integer> nos;
 
     public Man(int no) {
         this.no = no;
-        this.nos = new ArrayList();
+        this.nos = new ArrayList<>();
     }
 
     public int getNo() {
@@ -22,14 +22,15 @@ public class Man implements Cloneable{
         this.no = no;
     }
 
-public void addNO(int i){
-    nos.add(i);
-}
-    public Man clone(){
-        Man man =null;
+    public void addNO(int i) {
+        nos.add(i);
+    }
+
+    public Man clone() {
+        Man man = null;
         try {
-            man= (Man) super.clone();
-            man.nos= (ArrayList) nos.clone();
+            man = (Man) super.clone();
+            man.nos = (ArrayList) nos.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

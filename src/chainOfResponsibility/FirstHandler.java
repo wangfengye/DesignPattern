@@ -6,12 +6,11 @@ package chainOfResponsibility;
 public class FirstHandler extends Handler {
     @Override
     void handleRequest(int money) {
-        if (money<30){
+        if (money < 30) {
             //处理
             System.out.println("[NO.1处理]:通过");
-        }else {
-            //责任传递
-            if(getHandler() != null) getHandler().handleRequest(money);
+        } else {
+            handlerNext(money);
         }
     }
 }
