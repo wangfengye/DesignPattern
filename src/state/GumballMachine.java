@@ -13,7 +13,7 @@ public class GumballMachine {
     private State state;
     int count = 0;
 
-    public GumballMachine(int count) {
+    public  GumballMachine(int count) {
         this.count = count;
         sold =new Sold(this);
         soldOut= new SoldOut(this);

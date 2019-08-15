@@ -8,5 +8,5 @@ public abstract class Duck {
     abstract void display();
     void fly(){
         flyBehaviour.fly();
-    };
+    }
 }
