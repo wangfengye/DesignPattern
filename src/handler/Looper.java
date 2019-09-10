@@ -7,7 +7,7 @@ package handler;
  */
 public final class Looper {
     private static final ThreadLocal<Looper> sLooper = new ThreadLocal<>();
-     MessageQueue mQueue;
+    MessageQueue mQueue;
 
     public Looper() {
         mQueue = new MessageQueue();
@@ -20,8 +20,9 @@ public final class Looper {
         sLooper.set(new Looper());
         System.out.println(Thread.currentThread().getName() + " looper init");
     }
-    public static Looper myLooper(){
-        return  sLooper.get();
+
+    public static Looper myLooper() {
+        return sLooper.get();
     }
 
     public static void loop() {//轮询读消息
